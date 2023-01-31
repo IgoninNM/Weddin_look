@@ -1,0 +1,14 @@
+{
+  "name": "wedding_look_beta",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react-responsive-carousel": "^3.2.23"
+  }
+}

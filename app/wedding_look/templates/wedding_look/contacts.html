@@ -1,0 +1,32 @@
+{% extends 'wedding_look/base.html' %}
+{% load static %}
+
+{% block content %}
+  <div class="container main">
+        <div class="row gy-5">
+            <div class="col-12 d-flex justify-content-center fw-bold fs-3">
+                <p>Контакты</p>
+            </div>
+            <div class="col-6">
+                <p>Адрес: г.Барнаул, проспект Ленина, 195А</p>
+                <p class="pt" id="phone_number">По предварительной записи. <br>
+                Телефон: +7 (995) 697-27-83 <br>
+                Email: wedding_look@mail.ru</p>
+                <p><ul>
+                    <li>Пн-Пт 10:00 - 20:00</li>
+                    <li class="pt-2">Cб-Вс 10:00 - 21:00</li>
+                </ul></p>
+            </div>
+            <div class="col-6">
+                <div style="position:relative;overflow:hidden;"><a
+                        href="https://yandex.ru/maps/197/barnaul/?utm_medium=mapframe&utm_source=maps"
+                        style="color:#eee;font-size:12px;position:absolute;top:0px;">Барнаул</a><a
+                        href="https://yandex.ru/maps/197/barnaul/?ll=83.738864%2C53.381366&utm_medium=mapframe&utm_source=maps&z=17"
+                        style="color:#eee;font-size:12px;position:absolute;top:14px;">Барнаул — Яндекс Карты</a><iframe
+                        src="https://yandex.ru/map-widget/v1/-/CCUrE4H70D" width="560" height="400" frameborder="1"
+                        allowfullscreen="true" style="position:relative;"></iframe></div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

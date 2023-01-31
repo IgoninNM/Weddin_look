@@ -1,0 +1,59 @@
+{% extends 'wedding_look/base.html' %}
+{% load static %}
+
+{% block content %}
+   <div class="container main">
+        <div class="row gy-5">
+            <div class="col-xl-7 text-start d-flex align-items-center">
+
+                <p id="text_about_wl">
+                    <span class="text-start d-flex align-items-center justify-content-center fw-bold fs-1">Наш Салон
+                        Wedding Look</span> <br>
+                    <span class="fst-italic fs-4" id="wl">Wedding Look</span> – свадебный дом, в котором окружат заботой
+                    и без стеснения можно задать любые вопросы,
+                    словно секретничаешь с лучшей подругой. <br>
+                    Для вас:
+                    <br>
+                    <span class="dot">европейские тенденции свадебной моды; </span> <br>
+                    <span class="dot">все платья коллекций 2023 года по доступным ценам; </span> <br>
+                    <span class="dot">особая атмосфера и дружелюбный сервис; </span> <br>
+                    <span class="dot">образ от платья до аксессуаров, фаты, комплектов на утро невесты и подвязки.
+                    </span> <br>
+
+                    Будьте в тренде вместе с новыми коллекциями, предлагающими изысканные романтичные, или элегантно
+                    классические наряды для твоего торжества.
+                </p>
+            </div>
+            <div class="col-xl-5 d-flex justify-content-xl-end justify-content-center">
+                <img src="{% static 'wedding_look/pic/hero.jpg' %}" alt="" width="420" height="600">
+            </div>
+        </div>
+        <div class="col-12 mt-5 d-flex justify-content-center">
+            <div id="carouselControls" class="carousel slide carousel_about_salon d-flex justify-content-center" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="{% static 'wedding_look/pic/about3.JPG' %}" class="d-block " alt="..." style="height:600px; width:100%;">
+
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{% static 'wedding_look/pic/about1.JPG' %}" class="d-block " alt="..." style="height:600px; width:100%;">
+
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{% static 'wedding_look/pic/about2.JPG' %}" class="d-block" alt="..." style="height:600px; width:100%;">
+
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselControls" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselControls" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+     </div>
+    <div class="circle text-center"><p>Запись <br>на примерку</p></div>
+{% endblock %}

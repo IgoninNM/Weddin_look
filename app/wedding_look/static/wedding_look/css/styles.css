@@ -1,0 +1,388 @@
+@font-face {
+    font-family: 'newfont';
+    src: url('../fonts/CenturyStd-LightItalic.woff') format('truetype');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Work+Sans:wght@300;400;600&display=swap');
+
+
+body{
+    
+    font-family: 'Work Sans', sans-serif;
+    /* background: no-repeat 100% url(../pic/svg1.svg);
+    background-size: cover; */
+    
+     /* background-color: rgb(231, 231, 231); */
+
+}
+
+.main{
+    background-color: white;
+    margin-top: 40px;
+}
+
+.header_style{
+    background-color: #E7E7E6;
+    min-height: 100px;
+}
+
+.header_font{
+    font-weight: 600;
+    font-size: 17.5px;
+    letter-spacing: 1px;
+    
+}
+#phone_number{
+    font-family: newfont;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.dropdown-menu{
+    background-color: #E7E7E6; 
+    font-weight: 600;
+}
+
+#text_about_wl{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.9;
+}
+
+#wl{
+    opacity: 70%;
+    letter-spacing: 1px;
+}
+
+.dot::before{
+    content: '\25CF';
+    padding-right: 10px;
+    color: black;
+}
+
+.wl_btn {
+    height: 50px;
+    width: 150px;
+    border: 2.5px solid #D7C87D;
+    text-align: center;
+    padding: 11px 20px;
+    transition: #D7C87D .2s;
+}
+
+.wl_btn:hover{
+    background-color: #D7C87D;
+    cursor:pointer;
+}
+
+.icons{
+    max-width: 365px;
+}
+
+.icons_svg{
+    max-width: 100px;
+    max-height: 100px;
+    min-height: 100px;
+    min-width: 100px;
+    
+    
+} 
+
+/* .icons_bg::before{
+    content: '';
+    width: 120px;
+    height:120px;
+    border-radius: 50%;
+    display:inline-block;
+    position:absolute;
+    background-color: #030302;
+    opacity: 0.05;
+    
+
+}  */
+
+
+#carouselExampleControls{
+    max-width: 401px !important;
+}
+
+#carouselbg{
+    background:linear-gradient(90deg, white,RGBA(108, 117, 125), white);
+    
+    /* background-color:  RGBA(108, 117, 125); */
+    
+    
+}
+
+#carousel_buttons{
+    background-color: black;
+    width:5%;
+}
+
+
+.footer{
+    background-color: #686866;
+}
+
+.icon{
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.icon:hover{
+    cursor: pointer;
+   
+}
+
+.circle {
+    background: #D7C87D;
+    font-weight: 500;
+    color: black;
+    font-size:medium;
+    border-radius: 60%;
+    box-shadow: 0.275em 0.275em 0 0 rgba(15, 28, 63, 0.125);
+    height: 8em;
+    width: 8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 73%;
+    right:1%; 
+    z-index: 1100; 
+    opacity:0.85;
+    transition: height 1s, width 1s, opacity 1s;
+         
+}
+.circle:hover {
+    cursor: pointer;
+    height: 9em;
+    width: 9em;
+    opacity:0.95;
+}
+
+hr{
+    background-color: #D7C87D;
+    border: none;
+    height: 3px;
+    
+}
+
+.pic_text > p{
+    position: relative;
+    top: 93%;
+    font-weight: 800;
+    font-weight: bolder;
+    font-size: larger;
+    font-style: italic;
+    color:rgb(221, 217, 218);
+    background-color: rgb(32, 31, 31);
+    /* opacity: 0.85; */
+    transition: opacity 1.2s;
+}
+
+.pic_text > p:hover{
+    opacity: 0.65;
+    cursor: pointer;
+}
+
+#pic1{
+    background-image:url(../pic/wedding_dresses/Бриз.jpg);
+    background-size: cover;
+    width: 320px;
+    height: 500px;
+}
+
+#pic2{
+    background-image: url(../pic/wedding_dresses/Клер.jpg);
+    background-size: cover;
+    width: 320px;
+    height: 500px;
+}
+
+#pic3{
+    background-image: url(../pic/wedding_dresses/Лилиан.jpg);
+    background-size: cover;
+    width: 320px;
+    height: 500px;
+}
+
+#pic4{
+    background-image: url(../pic/wedding_dresses/Хельда.jpg);
+    background-size: cover;
+    width: 320px;
+    height: 500px;
+}
+
+#pic5{
+    background-image: url(../pic/wedding_dresses/АВЕ.jpeg);
+    background-size: cover;
+    width: 320px;
+    height: 500px;
+}
+
+#pic6{
+    background-image: url(../pic/wedding_dresses/Новелла.JPG);
+    background-size: cover;
+    width: 320px;
+    height: 500px;
+}
+
+.blog_news{
+    height: 120px;
+    width: 100%;
+    font-size: 35px;
+    font-weight: 500;
+    border: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: gray;
+    background: linear-gradient(to left, white 50%, #efe8e8 50%) right;
+    background-size: 200% 100%;
+
+    transition: all 1s;
+}
+
+.blog_news:hover{
+    /* background-color: #edeae6; */
+    /* background-size: 100% 100%; */
+    background-position: left;
+
+}
+
+.blog_news:not(:hover){
+    background: right;
+}
+
+.carousel_about_salon{
+    width: 1296px;
+
+}
+
+.service_text{
+    letter-spacing: 2px;
+}
+
+a{
+    text-decoration: none;
+    color: #0a0a0a;
+}
+
+a:hover{
+    color: #0a0a0a;
+}
+.phone{
+    color: #0a0a0a;
+}
+
+#carouselCatalogue{
+    max-width:320px;
+}
+
+
+.wrapper{
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+}
+
+.about_us_title{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    height:100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+
+
+
+/* .wrapper:before{
+    content: ' ';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: -1;
+    background-image: url(../pic/photo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: translateZ(-10px)scale(2);
+
+}  */
+
+/* .wrapper{
+    background-image: url(../pic/photo.jpg);
+    background-position: center;
+    background-size: cover;
+
+} */
+
+.about_us_title h1{
+    font-size: 5rem;
+    color: black;
+    /* text-shadow: 1px 5px 5px black; */
+}
+
+/* #left_flower,
+#right_flower {
+    position: absolute;
+    object-fit: cover;
+    z-index: -1;
+    transform: translateZ(-10px)scale(2);
+}
+
+#left_flower{
+    left: 250px;
+}
+
+#right_flower{
+    right: 250px;
+} */
+
+/* .rings{
+    background-image: url(../pic/rings.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 40%;
+
+
+
+} */
+
+/* .rings_before:before{
+    content: ' ';
+  display: block;
+  position:absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  background-image: url(../pic/rings.png);
+  background-repeat: no-repeat;
+  background-position: 50% 37%;
+  background-attachment: fixed;
+  z-index: -1;
+} */
+
+.pic_text{
+    font-size: 15px;
+}
+
+.about_us_text{
+    font-size: 23px;
+    line-height: 40px;
+
+    font-weight: 100;
+
+
+}
+
+.main {
+    min-height: 80vh;
+    height: auto !important;
+    height: 100%;
+
+ }

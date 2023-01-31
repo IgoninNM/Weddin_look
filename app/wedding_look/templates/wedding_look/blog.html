@@ -1,0 +1,57 @@
+{% extends 'wedding_look/base.html' %}
+
+
+{% block content %}
+<!-- <div class="container main">-->
+<!--        <div class="row">-->
+<!--            <div class="col-xl-12 blog">-->
+<!--                {% for blog in object_list %}-->
+<!--                <p class="fs-1">{{ blog.title }}</p>-->
+<!--                <div class="blog_news_pic mb-2 text-center d-flex justify-content-center align-items-center"><p class="fs-3">{{ blog.image}}</p></div>-->
+<!--                <div class="mb-0">-->
+<!--                    <div class="blog_news d-flex justify-content-start align-items-center" type="button"-->
+<!--                        data-bs-toggle="collapse" data-bs-target="#news_item{{ forloop.counter }}" aria-expanded="false">-->
+<!--                        <span class="px-5">Подробнее</span>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="collapse" id="news_item1">-->
+<!--                    <div class="card card-body">-->
+<!--                        {{ blog.content }}-->
+<!--                    </div>-->
+<!--                </div>-->
+
+
+
+
+
+<!--        {% endfor %}-->
+<!--            </div>-->
+
+<!--        </div>-->
+<!--    </div>-->
+
+ <div class="container main">
+        <div class="row">
+            <div class="col-xl-12 blog">
+            {% for blog in object_list %}
+                <div class="mb-0 mt-5">
+                    <div class="blog_news_pic mb-2 text-center d-flex justify-content-center align-items-center"><p class="fs-3">
+                        <img src="{{ blog.image.url }}" alt=""></p></div>
+                    <div class="blog_news d-flex justify-content-start align-items-center" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#news_item{{ forloop.counter }}" aria-expanded="false">
+                        <span class="px-5">{{ blog.title }}</span>
+
+                    </div>
+                </div>
+                <div class="collapse" id="news_item{{ forloop.counter }}">
+                    <div class="card card-body">
+                       {{ blog.content }}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+            <div class="circle text-center"><p>Запись <br>на примерку</p></div>
+{% endblock %}

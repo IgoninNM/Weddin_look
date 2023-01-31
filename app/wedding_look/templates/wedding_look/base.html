@@ -1,0 +1,131 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="{% static 'wedding_look/js/bootstrap.bundle.min.js' %}"> </script>
+    <link rel="stylesheet" href="{% static 'wedding_look/css/font_awesome/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'wedding_look/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'wedding_look/css/styles.css' %}">
+  {% block css %} {% endblock %}
+    <title>{{ title }}</title>
+</head>
+
+<body>
+<!-- Начало header -->
+    <nav class="navbar navbar-expand-lg sticky-top mb-1 py-0">
+        <div class="container-fluid header_style">
+            <a href="{% url 'index' %}" class="navbar-brand"><img src="{% static 'wedding_look/pic/logo/Wedding Look1.svg' %}" alt="" width="250" height="80"></a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav"
+                aria-expanded="true" aria-label="Expand Navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav flex-fill justify-content-center header_font">
+                    <li class="nav-item px-3 dropdown">
+                        <a href="" class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Каталог платьев</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{% url 'wedding_dresses' %}">Свадебные платья</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="{% url 'evening_dresses' %}">Вечерние платья</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a href="{% url 'accessories_dresses' %}" class="nav-link">Аксессуары</a>
+                    </li>
+<!--                    <li class="nav-item px-3">-->
+<!--                        <a href="" class="nav-link">Акции</a>-->
+<!--                    </li>-->
+                    <li class="nav-item px-3">
+                        <a href="{% url 'blog' %}" class="nav-link">Блог</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a href="{% url 'contacts' %}" class="nav-link">Контакты</a>
+                    </li>
+                    {% if user.is_authenticated %}
+                         <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-user-circle"></i>
+                        </a>
+                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li>
+                                <a class="dropdown-item" href="{% url 'users:profile' user.id %}">
+                                    Профиль
+                                </a>
+                            </li>
+<!--                            <li><a class="dropdown-item" href="#">Заказы</a></li>-->
+                             {% if user.is_superuser or user.is_staff %}
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'admin:index' %}">
+                                        Админ-панель
+                                    </a>
+                                </li>
+                             {% endif %}
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="{% url 'users:logout' %}">
+                                    Выйти
+                                </a>
+                            </li>
+                        </li>
+                    </ul>
+
+                    {% else %}
+                        <li class="nav-item">
+                        <a class="nav-link" href="{% url 'users:login' %}">Войти <i class="fas fa-sign-in-alt"></i></a>
+                    </li>
+                    {% endif %}
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+<!-- Конец header -->
+{% block content %} {% endblock %}
+<!-- Начало footer -->
+    <footer>
+        <div class="container-fluid position-sticky sticky-bottom py-4 mt-5 footer">
+            <div class="row fs-5 pt-3 pb-2">
+                <div class="col d-flex justify-content-center align-items-center">
+                    <p>Мы в соцсетях:
+                        <a href="https://vk.com/wedding_look22" class="social_network">
+                            <i class="fa fa-2x fa-vk icon" aria-hidden="true"></i></a>
+                        <a href="https://ok.ru/profile/600597793307" class="social_network">
+                            <i class="fa fa-2x fa-odnoklassniki icon" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://instagram.com/wedding_look22?igshid=NDk5N2NlZjQ=" class="social_network">
+                            <i class="fa fa-2x fa-instagram icon" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=79956972783" class="social_network">
+                            <i class="fa fa-2x fa-whatsapp icon" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://telegram.me/wedding_look22" class="social_network">
+                            <i class="fa fa-2x fa-telegram icon" aria-hidden="true"></i>
+                        </a>
+                    </p>
+                </div>
+                <div class="col d-flex justify-content-center pt-2 align-items-center">
+                    <p>Адрес: проспект Ленина, 195А, Барнаул</p>
+                </div>
+                <div class="col d-flex justify-content-center pt-2 align-items-center">
+                    <p class="phone">тел: +7 (995) 697-27-83 </p>
+                </div>
+
+            </div>
+        </div>
+
+    </footer>
+
+<!-- Конец footer -->
+<script src="{% static 'wedding_look/fontawesome/fontawesome-icons.js' %}" crossorigin="anonymous"></script>
+</body>
+</html>
